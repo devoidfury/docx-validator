@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+unzip -o -j "$1" "word/document.xml" -d "./tmp"
+xmllint --format "./tmp/document.xml" > "./tmp/document-pretty.xml"
+
+xmllint -noout -nonet -debugent \
+  -schema "./schemas/microsoft/wml-2010.xsd" \
+  "./tmp/document-pretty.xml" 2>&1
+
