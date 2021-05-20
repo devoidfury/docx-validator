@@ -6,8 +6,10 @@
   xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
   xmlns="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
   xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   elementFormDefault="qualified" attributeFormDefault="qualified" blockDefault="#all"
   targetNamespace="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <xsd:import namespace="http://schemas.openxmlformats.org/markup-compatibility/2006" schemaLocation="../mce/mc.xsd"/>
   <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
     schemaLocation="dml-wordprocessingDrawing.xsd"/>
   <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/math"
@@ -3626,6 +3628,7 @@
           <xsd:element name="body" type="CT_Body" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
         <xsd:attribute name="conformance" type="s:ST_ConformanceClass"/>
+        <xsd:attribute ref="mc:Ignorable" use="optional" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
