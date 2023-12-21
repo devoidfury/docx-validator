@@ -1,4 +1,4 @@
-basic validation of word xml document, based on micorsoft documentation.
+basic validation of word xml/ooxml documents, based on microsoft documentation, that does not require c# or dotnet framework.
 
 requires xmllint, part of libxml2.
 
